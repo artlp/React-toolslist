@@ -5,9 +5,18 @@
 .mainwrapper {
   max-width: 500px !important;
   margin: 0 auto;
+  box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.032);
   & .bottom-menu {
     max-width: 500px !important;
   }
+  & .details-header-buttons {
+    max-width: 500px !important;
+
+  }
+}
+
+footer {
+  max-width: 500px !important;
 }
 
 

@@ -1,7 +1,7 @@
 {
   "name": "react-toolslist",
   "version": "0.1.0",
-  "homepage": "https://artlp.github.io/React-toolslist",
+  "homepage": "https://artlp.github.io/React-toolslist", 
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.5",

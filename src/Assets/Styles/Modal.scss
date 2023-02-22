@@ -1,0 +1,61 @@
+:root {
+  --main-color: #06c15b;
+}
+
+.MuiDialogActions-root {
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.css-ypiqx9-MuiDialogContent-root {
+  padding: 0 24px 12px;
+}
+
+.modal_button {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  max-width: 200px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 3.1rem;
+  border: none;
+  margin: 1rem;
+  width: 184px;
+  text-transform: none;
+  &:hover {
+    background-color: var(--main-color);
+  }
+  &:nth-child(1) {
+    color: #a7a7a7;
+    background-color: #f7f7f7;
+  }
+}
+
+.MuiPaper-root {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -webkit-border-radius: 20px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius: 20px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  & h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    overflow-wrap: break-word;
+    font-family: "Poppins", sans-serif;
+  }
+  & .smileIcon {
+    text-align: center;
+    padding-top: 2rem;
+  }
+}

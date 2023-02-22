@@ -1,0 +1,30 @@
+.bottom_menu {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  justify-content: space-around;
+  height: 5rem;
+  box-shadow: 0 -2px 4px rgba(214, 214, 214, 0.25);
+
+  & .bottom_menu_tab {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    & .active {
+      // color: #2b3f3a;
+      // background: red;
+      // border: 1px solid red;
+    }
+  }
+  & .bottom_menu_label {
+    font-size: 0.875rem;
+    color: #819892;
+  }
+}
+

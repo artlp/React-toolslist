@@ -1,0 +1,64 @@
+.filter-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 13px 4% 1px; //TODO fix .tool-list and filter padding on scroll
+  gap: 10px;
+  margin-bottom: 6px;
+  align-items: flex-start;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & .btn-filter {
+    box-sizing: border-box;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0.9rem;
+    color: #787878;
+    max-height: 2rem;
+    width: auto;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 4px 5px rgba(222, 222, 222, 0.25);
+    border-radius: 30px;
+    margin: 0;
+    white-space: nowrap;
+    &.active {
+      background: #06c15b;
+      color: #ffffff;
+    }
+    &.subfilter-active {
+      border: 1px solid #06c15b;
+    }
+    &.btn-hidden {
+      display: none;
+    }
+  }
+
+  & .filter-clear {
+    border: none;
+    box-shadow: none;
+    border-radius: none;
+    background: white;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    & img {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.library .tools-list {
+  padding-top: 4px;
+  padding-bottom: 80px;
+}

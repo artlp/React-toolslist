@@ -1,0 +1,20 @@
+.button-header-circle {
+  background-color: white;
+  border-radius: 50px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  stroke: black;
+  padding-top: 6px;
+  &:hover {
+    scale: 1.2;
+  }
+  &.active {
+    background: #06C15B;
+    stroke: white;
+  }
+}

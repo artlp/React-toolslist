@@ -1,0 +1,132 @@
+.login-signup-form {
+  width: 100%;
+}
+.login-signup-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 10%;
+  & a {
+    font-family: "Poppins", sans-serif;
+  }
+  & span {
+    padding: 10px 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    color: #959595;
+  }
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 0.2rem;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  width: 100%;
+  display: block;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #d9d9d9;
+  outline: none;
+  font-weight: 500;
+}
+
+.remember_checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.form_options {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+label {
+  width: 100%;
+}
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #e9eaec;
+  margin-right: 6px;
+}
+label,
+.form_options p {
+  color: #62646a;
+}
+
+:no-button {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+  height: 3.1rem;
+  border: none;
+  margin: 1rem;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e4e5e7;
+}
+
+.signup_offer {
+  position: relative;
+  top: -1rem;
+  justify-content: space-around;
+}
+
+.bottom_navigation {
+  background: #f1f1f1;
+  border-radius: 15px;
+  width: 80%;
+  height: 13px;
+  position: absolute;
+  bottom: 2rem;
+}
+
+label {
+  margin: 1rem 0;
+  position: relative;
+  display: inline-block;
+}
+
+#uses-label {
+  top: -10px;
+}
+input,
+textarea {
+  padding: 10px 0 0 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+input:focus + span,
+input:not(:placeholder-shown) + span,
+textarea:focus + span,
+textarea:not(:placeholder-shown) + span {
+  // opacity:1;
+  transform: scale(1) translateY(-50%) translateX(0);
+}

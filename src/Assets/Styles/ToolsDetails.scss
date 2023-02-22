@@ -1,0 +1,142 @@
+.details-wrapper {
+  max-height: 100vh; //FIXED fix height
+  overflow-y: scroll;
+  cursor: default;
+}
+
+.details-header {
+  max-height: 200px;
+  & .details-header-buttons {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    display: flex;
+    padding: 0 20px;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+  & .details-title {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: white;
+    position: relative;
+    top: -30px;
+    font-family: "Poppins", sans-serif;
+    & .details-tool-title {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  & .details-link {
+    cursor: pointer;
+  }
+  & h1 {
+    margin: 0;
+    color: #2b3f3a;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    font-weight: 600;
+    padding: 20px 4% 10px;
+  }
+}
+.details-body {
+  padding: 2rem 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 1.33rem;
+  margin-bottom: 5rem;
+  & .details-description {
+    color: #2b3f3a;
+    font-size: 1rem;
+  }
+}
+
+.details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 4%;
+  gap: 5px;
+}
+
+.details-categories {
+  & .details-category-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 7px;
+  }
+  & .details-category {
+    font-weight: 500;
+    color: #787878;
+    line-height: 150%;
+    font-size: 0.75rem;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 4px 5px rgba(222, 222, 222, 0.25);
+    border-radius: 30px;
+    padding: 8px 14px;
+    min-width: 70px;
+  }
+}
+.details-subheader {
+  color: #819892;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.details-marks {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  & p {
+    line-height: 150%;
+    font-size: 1rem;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: #000000;
+  }
+}
+
+.details-footer {
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px -2px 4px rgba(214, 214, 214, 0.25);
+  height: 5rem;
+}
+#long-menu > div.MuiPaper-root {
+  background-color: transparent;
+  box-shadow: none; //TODO fix MUI hover effect
+}
+
+li.MuiMenuItem-gutters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin-left: 3px;
+  border-radius: 7px;
+  background-color: white;
+  margin-bottom: 15px;
+  -webkit-filter: drop-shadow(0px 1px 4px rgba(143, 143, 143, 0.25));
+  filter: drop-shadow(0px 1px 4px rgba(143, 143, 143, 0.25));
+  // padding: 0.8rem;
+  font-family: "Poppins", sans-serif;
+  &:hover {
+    background-color: rgb(232, 232, 232);
+  }
+}

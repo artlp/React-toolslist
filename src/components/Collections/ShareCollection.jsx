@@ -28,7 +28,7 @@ export default function AlertDialogSlide({
     return (
       <section className="share-user-card" key={user.name}>
         <div className="user-photo">
-          <img src={`/Assets/Images/users/${user.id}.jpg`} alt="" />
+          <img src={process.env.PUBLIC_URL + `/Assets/Images/users/${user.id}.jpg`} alt="" />
         </div>
         <div className="user-details">
           <h3>{user.name}</h3>

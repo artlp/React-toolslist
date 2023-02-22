@@ -12,6 +12,7 @@ function App() {
   return (
     <Routes>
       <Route exact path="/React-toolslist" element={<Main />}/>
+      <Route path="/" element={<Main />}/>
       <Route path="/adding-tool" element={<Adding />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />

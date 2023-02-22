@@ -70,7 +70,7 @@ function CollectionsDetails({ state }) {
             left: position + "px",
           }}
         >
-          <img src={`/Assets/Images/users/${user.id}.jpg`} alt="" />
+          <img src={process.env.PUBLIC_URL + `/Assets/Images/users/${user.id}.jpg`} alt="" />
         </div>
       );
     });
@@ -106,7 +106,7 @@ function CollectionsDetails({ state }) {
         </div>
         <CardMedia
           sx={{ height: 150 }}
-          image={`/Assets/Images/${item.image}`}
+          image={process.env.PUBLIC_URL + `/Assets/Images/${item.image}`}
           title={`${item.name} header image`}
           alt={`${item.name} header image`}
         />

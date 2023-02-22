@@ -34,8 +34,8 @@ function DiscoveryMain() {
   return (
     <div>
       <Filter page={"home"}/>
-      <>{renderedList()}</>
       {showSearchToolbar && <SearchToolbar />}
+      <>{renderedList()}</>
     </div>
   );
 }

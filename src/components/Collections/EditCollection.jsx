@@ -10,6 +10,7 @@ import CopyIcon from "../../Assets/Images/Share-link.svg";
 import { useState, useContext } from "react";
 import ToolsContext from "../../Context/toolsListContext";
 import EditDialogToolsList from "./EditDialogToolsList";
+import "../../Assets/Styles/Collections.scss";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -54,7 +55,11 @@ export default function AlertDialogSlide({ open, handleClose, item }) {
                 </>
               </section>
               <section>
-                <p className="edit-tools-header">{filter.length === 1 ? `${filter.length} tool`:`${filter.length} tools`}</p>
+                <p className="edit-tools-header">
+                  {filter.length === 1
+                    ? `${filter.length} tool`
+                    : `${filter.length} tools`}
+                </p>
                 <EditDialogToolsList tools={filter}></EditDialogToolsList>
               </section>
             </section>

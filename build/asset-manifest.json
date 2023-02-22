@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/React-toolslist/static/css/main.dc3c95e2.css",
+    "main.css": "/React-toolslist/static/css/main.1c36cf84.css",
     "main.js": "/React-toolslist/static/js/main.b0b68a76.js",
     "static/media/btn_google_signup.svg": "/React-toolslist/static/media/btn_google_signup.ff0e5b1868780b5019156b6fe47a34c8.svg",
     "static/media/btn_google_login.svg": "/React-toolslist/static/media/btn_google_login.25750ebb7ed8797073a5a37d7050e9d8.svg",
@@ -36,11 +36,11 @@
     "static/media/collection-preview.svg": "/React-toolslist/static/media/collection-preview.bfad610290b176cd8d2e019d60664dfb.svg",
     "static/media/plus.svg": "/React-toolslist/static/media/plus.f5a7677f7eb74895e2e0e3cede46ca5e.svg",
     "static/media/arrow-right.svg": "/React-toolslist/static/media/arrow-right.4022a8a3b585f70f5233ef569ef5a370.svg",
-    "main.dc3c95e2.css.map": "/React-toolslist/static/css/main.dc3c95e2.css.map",
+    "main.1c36cf84.css.map": "/React-toolslist/static/css/main.1c36cf84.css.map",
     "main.b0b68a76.js.map": "/React-toolslist/static/js/main.b0b68a76.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc3c95e2.css",
+    "static/css/main.1c36cf84.css",
     "static/js/main.b0b68a76.js"
   ]
 }

@@ -1,0 +1,27 @@
+.social-share-modal {
+  background: rgba(0, 0, 0, 0.491);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  & .social-buttons {
+    width: auto;
+    background: white;
+    border: 1px solid #eeeeee;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0 4px 5px rgba(222, 222, 222, 0.25);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    & button {
+      max-width: 32px;
+      margin: 6px;
+    }
+  }
+}

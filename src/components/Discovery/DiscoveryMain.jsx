@@ -1,8 +1,8 @@
 import { useEffect, useContext } from "react";
 import ToolsList from "../ToolsDisplay/ToolsList";
+import CollectionsList from "../Library/CollectionsList";
 import "../../Assets/Styles/Discovery.scss";
 import useHeader from "../hooks/headerState";
-import CollectionsList from "../Library/CollectionsList";
 import SearchToolbar from "../Search/SearchToolbar";
 import ToolsListContext from "../../Context/toolsListContext";
 import Filter from "../Library/Filter";

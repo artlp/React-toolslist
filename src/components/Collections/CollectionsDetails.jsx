@@ -23,14 +23,110 @@ function CollectionsDetails({ state }) {
   }, []);
 
   const sharedUsers = [
-    { id: 1, name: "Andre Stevens", website: "http://vi.nf/vobta" },
-    { id: 2, name: "Victor Jefferson", website: "http://tesuave.ca/ulazibnev" },
-    { id: 3, name: "Olivia McGuire", website: "http://wuvek.tc/kuw" },
-    { id: 2, name: "Rachel Marsh", website: "http://bianpe.sn/casowmi" },
-    { id: 3, name: "Lou Day", website: "http://muz.mq/efafe" },
-    { id: 1, name: "Timothy Watson", website: "http://mucurgu.kw/mezek" },
-    { id: 2, name: "Leroy Padilla", website: "http://jotocko.net/hejrak" },
-    { id: 3, name: "Helen Riley", website: "http://nepwew.ni/og" },
+    {
+      id: 1,
+      name: "Andre Stevens",
+      tools_created: [1, 2],
+      collections_created: [2, 3, 4],
+      image: "1.jpg",
+      company: "Israel IT",
+      position: "Designer",
+      email: "gem_add@gmail.com",
+      phone: "00 45 93 384 33",
+      city: "Lviv",
+      password: null,
+    },
+    {
+      id: 2,
+      name: "Victor Jefferson",
+      tools_created: [1, 4],
+      collections_created: [1, 2, 3],
+      image: "2.jpg",
+      position: "Designer",
+      company: null,
+      email: null,
+      phone: null,
+      city: null,
+      password: null,
+    },
+    {
+      id: 3,
+      name: "Olivia McGuire",
+      tools_created: [1, 4],
+      collections_created: [2, 3],
+      image: "3.jpg",
+      company: null,
+      position: "Designer",
+      email: null,
+      phone: null,
+      city: null,
+      password: null,
+    },
+    {
+      id: 2,
+      name: "Rachel Marsh",
+      tools_created: [1, 4],
+      collections_created: [4],
+      image: "2.jpg",
+      company: null,
+      position: "Designer",
+      email: null,
+      phone: null,
+      city: null,
+      password: null,
+    },
+    {
+      id: 3,
+      name: "Lou Day",
+      tools_created: [1, 2, 3, 4],
+      collections_created: [1, 2, 3],
+      image: "3.jpg",
+      company: null,
+      position: "Designer",
+      email: null,
+      phone: null,
+      city: null,
+      password: null,
+    },
+    {
+      id: 1,
+      name: "Timothy Watson",
+      tools_created: [1, 4],
+      collections_created: [1, 2, 3],
+      image: "1.jpg",
+      company: null,
+      position: "Designer",
+      email: null,
+      phone: null,
+      city: null,
+      password: null,
+    },
+    {
+      id: 2,
+      name: "Leroy Padilla",
+      tools_created: [1, 4],
+      collections_created: [1, 2, 3],
+      image: "2.jpg",
+      company: null,
+      position: "Designer",
+      email: null,
+      phone: null,
+      city: null,
+      password: null,
+    },
+    {
+      id: 3,
+      name: "Helen Riley",
+      tools_created: [1, 4],
+      collections_created: [1, 2, 3],
+      image: "3.jpg",
+      company: null,
+      position: "Designer",
+      email: null,
+      phone: null,
+      city: null,
+      password: null,
+    },
   ];
 
   const [shareOpen, setShareOpen] = useState(false);
@@ -70,7 +166,7 @@ function CollectionsDetails({ state }) {
             left: position + "px",
           }}
         >
-          <img src={process.env.PUBLIC_URL + `/Assets/Images/users/${user.id}.jpg`} alt="" />
+          <img src={`/Assets/Images/users/${user.id}.jpg`} alt="" />
         </div>
       );
     });
@@ -106,7 +202,7 @@ function CollectionsDetails({ state }) {
         </div>
         <CardMedia
           sx={{ height: 150 }}
-          image={process.env.PUBLIC_URL + `/Assets/Images/${item.image}`}
+          image={`/Assets/Images/${item.image}`}
           title={`${item.name} header image`}
           alt={`${item.name} header image`}
         />
@@ -114,7 +210,12 @@ function CollectionsDetails({ state }) {
 
         <div className="details-title">
           <div className="collection-details-toolbar">
-            <div> {filteredTools.length === 1 ? `${filteredTools.length} tool`:`${filteredTools.length} tools`} </div>
+            <div>
+              {" "}
+              {filteredTools.length === 1
+                ? `${filteredTools.length} tool`
+                : `${filteredTools.length} tools`}{" "}
+            </div>
             <div className="library-search-icon">
               <img src={ButtonSearch} alt="" />
             </div>

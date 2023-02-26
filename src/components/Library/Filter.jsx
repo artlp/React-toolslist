@@ -4,10 +4,6 @@ import FilterClear from "../../Assets/Images/Filter-close.svg";
 
 function Filter({page}) {
   const {
-    tools,
-    collections,
-    setFilteredTools,
-    setFilteredCollections,
     filterState,
     setFilterState,
   } = useContext(ToolsContext);
@@ -57,7 +53,7 @@ function Filter({page}) {
   };
 
   const renderedSubfilters = () => {
-    if (!filterState || page === "home") {
+    if (!filterState || page === "home" || page === "profile") {
       return;
     } else if (filterState === "tools") {
       return toolsSubfilter.map((button) => {

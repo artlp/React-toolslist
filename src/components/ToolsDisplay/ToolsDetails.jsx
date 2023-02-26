@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
 import "../../Assets/Styles/ToolsDetails.scss";
 import CardMedia from "@mui/material/CardMedia";
@@ -8,6 +8,7 @@ import DetailedHeaderButtons from "./DetailedHeaderButtons";
 import CollectButton from "../BottomMenu/CollectButton";
 import SimpleButton from "../BottomMenu/SimpleButton";
 import EditButton from "../ToolsDisplay/EditButton";
+import SocialShare from "./SocialShare";
 
 function ToolsDetails({ state }) {
   // const params = useParams();
@@ -16,6 +17,17 @@ function ToolsDetails({ state }) {
   // const { tools } = useContext(ToolsContext); //I don't need an entire tools object here...
   // const tool = tools.find((item) => item.id === id);
   const location = useLocation();
+  const [shareOpen, setShareOpen] = useState(false);
+  const [editOpen, setEditOpen] = useState(false);
+  const [deleteOpen, setDeleteOpen] = useState(false);
+
+  const handleClick = () => {
+    setShareOpen(!shareOpen);
+  };
+
+  const handleClose = () => {
+    setShareOpen(false);
+  };
   const { item } = location.state; //BUG error when opening page via direct link (http://localhost:3000/tools/22)
   const renderedCategories = item.categories.map((e) => {
     return (
@@ -36,11 +48,11 @@ function ToolsDetails({ state }) {
       <section className="details-wrapper">
         <div className="details-header">
           <div className="details-header-buttons">
-            <DetailedHeaderButtons />
+            <DetailedHeaderButtons page={"tool"} handleClick={handleClick} />
           </div>
           <CardMedia
             sx={{ height: 150 }}
-            image={process.env.PUBLIC_URL + `/Assets/Images/${item.image}`}
+            image={`/Assets/Images/${item.image}`}
             title={`${item.name} header image`}
             alt={`${item.name} header image`}
           />
@@ -48,7 +60,7 @@ function ToolsDetails({ state }) {
           <div className="details-title">
             <div className="details-tool-title">
               <h1>{item.name}</h1>
-              <EditButton item={"tool"}/>
+              <EditButton item={"tool"} />
             </div>
             <div className="details-container">
               <img src={LinkIcon} alt="" />
@@ -92,6 +104,9 @@ function ToolsDetails({ state }) {
         </SimpleButton>
         <CollectButton />
       </footer>
+      {shareOpen ? (
+        <SocialShare location={location.pathname} handleClose={handleClose} />
+      ) : null}
     </>
   );
 }

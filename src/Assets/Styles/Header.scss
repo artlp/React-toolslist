@@ -89,3 +89,27 @@ header {
     padding-top: 7px;
   }
 }
+
+.header-home.profile {
+  box-shadow: none;
+  & .header-profile-buttons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    & img {
+      width: 21px;
+      height: 21px;
+    }
+  }
+}
+
+.header-home.profile-edit {
+  justify-content: center;
+  box-shadow: none;
+}
+
+.menu-option a {
+  color: black;
+  display: block;
+  padding: 6px 12px;
+}

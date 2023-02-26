@@ -13,7 +13,6 @@ import RadioInactive from "../../Assets/Images/Radio-inactive.svg";
 import SelectRole from "./SelectRole";
 import CopyIcon from "../../Assets/Images/Share-link.svg";
 import { useState } from "react";
-import "../../Assets/Styles/Collections.scss";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -29,14 +28,11 @@ export default function AlertDialogSlide({
     return (
       <section className="share-user-card" key={user.name}>
         <div className="user-photo">
-          <img
-            src={process.env.PUBLIC_URL + `/Assets/Images/users/${user.id}.jpg`}
-            alt=""
-          />
+          <img src={`/Assets/Images/users/${user.id}.jpg`} alt="" />
         </div>
         <div className="user-details">
           <h3>{user.name}</h3>
-          <p>{user.website}</p>
+          <p>{user.position}</p>
         </div>
         <SelectRole></SelectRole>
       </section>
@@ -87,20 +83,18 @@ export default function AlertDialogSlide({
                     />
                   </div>
                 </div>
-                {privacy === "private" ? (
-                  <>
-                    <input
-                      className="share-input"
-                      type="text"
-                      placeholder="Add people"
-                    ></input>
-                    <p>
-                      Choose access: view or edit (option to add new tools and
-                      share it but not to delete)
-                    </p>
-                    <div className="share-users">{renderedUsers}</div>
-                  </>
-                ) : null}
+              {privacy === "private" ? (
+                <><input
+                  className="share-input"
+                  type="text"
+                  placeholder="Add people"
+                ></input>
+                <p>
+                  Choose access: view or edit (option to add new tools and share
+                  it but not to delete)
+                </p>
+                <div className="share-users">{renderedUsers}</div></>
+              ) : null}
               </section>
               <section className="share-public">
                 <div

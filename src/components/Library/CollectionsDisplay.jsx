@@ -12,7 +12,7 @@ function CollectionsDisplay({ item }) {
           <Link to={`/collections/${item.id}`} state={{ item: item }}>
             <img
               className="tool-image"
-              src={process.env.PUBLIC_URL + `/Assets/Images/${item.image}`}
+              src={`/Assets/Images/${item.image}`}
               alt={item.name}
             />
           </Link>

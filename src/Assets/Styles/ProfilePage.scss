@@ -1,0 +1,41 @@
+.profile-container {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & .user-photo {
+    width: 8rem;
+    & img {
+      width: 8rem;
+      background: #f0f0f0;
+      border-radius: 50%;
+    }
+  }
+  & .user-details {
+  text-align: center;
+
+    & p {
+      color: #819892;
+      font-size: 0.875rem;
+      margin-top: 0;
+    }
+    & h3 {
+      font-size: 1.875rem;
+      font-weight: 600;
+      margin: 11px 0 0 0;
+    }
+  }
+  & .user-stats span {
+    color: #2b3f3a;
+    font-weight: 500;
+  }
+  & input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-right: auto;
+}
+}

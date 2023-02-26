@@ -13,9 +13,7 @@ root.render(
     <ToolsListProvider>
       <HeaderProvider>
         <LoginProvider>
-          <div className="mainwrapper">
-            <App />
-          </div>
+          <App />
         </LoginProvider>
       </HeaderProvider>
     </ToolsListProvider>

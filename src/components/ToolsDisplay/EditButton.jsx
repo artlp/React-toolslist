@@ -3,8 +3,16 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import SettingsIcon from "@mui/icons-material/Settings";
+import { NavLink } from "react-router-dom";
 
-export default function LongMenu({ item, handleEdit, handleDelete }) {
+export default function LongMenu({
+  item,
+  handleEdit,
+  handleDelete,
+  icon,
+  profile,
+}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -16,16 +24,43 @@ export default function LongMenu({ item, handleEdit, handleDelete }) {
 
   const ITEM_HEIGHT = 28;
   const options = [
-    { label: "Edit", value: "edit", 
-    handleClick: () => {
-      setAnchorEl(null);
-      handleEdit();
-    } },
-    { label: "Delete", value: "delete",     handleClick: () => {
-      setAnchorEl(null);
-      handleDelete();
-    } },
+    {
+      label: "Edit",
+      value: "edit",
+      handleClick: () => {
+        setAnchorEl(null);
+        handleEdit();
+      },
+    },
+    {
+      label: "Delete",
+      value: "delete",
+      handleClick: () => {
+        setAnchorEl(null);
+        handleDelete();
+      },
+    },
   ];
+  const profileOptions = [
+    {
+      label: <NavLink to="/profile/edit">Edit</NavLink>, //TODO find better way to link to profile edit page
+      value: "edit",
+      handleClick: () => {
+        setAnchorEl(null);
+        
+      },
+    },
+    {
+      label: "Log Out",
+      value: "logout",
+      handleClick: () => {
+        setAnchorEl(null);
+        handleDelete();
+      },
+    },
+  ];
+
+  const menuOptions = profile ? profileOptions : options;
 
   return (
     <div>
@@ -37,7 +72,7 @@ export default function LongMenu({ item, handleEdit, handleDelete }) {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <MoreVertIcon />
+        {!icon ? <MoreVertIcon /> : <SettingsIcon />}
       </IconButton>
       <Menu
         disableScrollLock={true}
@@ -55,8 +90,12 @@ export default function LongMenu({ item, handleEdit, handleDelete }) {
           },
         }}
       >
-        {options.map((option) => (
-          <MenuItem key={option.value} selected={option.value === ""} onClick={option.handleClick}>
+        {menuOptions.map((option) => (
+          <MenuItem
+            key={option.value}
+            selected={option.value === ""}
+            onClick={option.handleClick}
+          >
             <div className="menu-option">{option.label}</div>
           </MenuItem>
         ))}

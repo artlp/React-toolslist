@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import CollectionsDisplay from "../Library/CollectionsDisplay";
 import ToolsContext from "../../Context/toolsListContext";
 
-function CollectionsList() {
+function CollectionsList({ profilePage, currentUser }) {
   const {
     collections,
     setFilteredCollections,
@@ -12,13 +12,20 @@ function CollectionsList() {
   } = useContext(ToolsContext);
 
   useEffect(() => {
-    setFilteredCollections(collections);
-  }, [setFilteredCollections, collections]);
+    if (currentUser && profilePage) {
+      const filter = collections.filter((collection) =>
+        currentUser.collections_created.includes(collection.id)
+      );
+      setFilteredCollections(filter);
+    } else {
+      setFilteredCollections(collections);
+    }
+  }, []);
 
   const renderedCollections = filteredCollections.map((item) => {
     return <CollectionsDisplay item={item} key={item.id} />;
   });
-  
+
   return (
     <section className="tools-list">
       {renderedCollections.length === 0 ? (

@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/React-toolslist/static/css/main.a69663f8.css",
-    "main.js": "/React-toolslist/static/js/main.690a6951.js",
+    "main.js": "/React-toolslist/static/js/main.ca01511d.js",
     "static/media/btn_google_signup.svg": "/React-toolslist/static/media/btn_google_signup.ff0e5b1868780b5019156b6fe47a34c8.svg",
     "static/media/btn_google_login.svg": "/React-toolslist/static/media/btn_google_login.25750ebb7ed8797073a5a37d7050e9d8.svg",
     "service-worker.js": "/React-toolslist/service-worker.js",
-    "static/media/addme-logo.svg": "/React-toolslist/static/media/addme-logo.63fd9b17a035ab782d583081cd49e506.svg",
+    "static/media/addme-logo.svg": "/React-toolslist/static/media/addme-logo.2a1e5b0dac790d67755b1082520b293b.svg",
     "static/media/collect.svg": "/React-toolslist/static/media/collect.b7b0dc449944db08f46e2c5b297d3011.svg",
     "static/media/Share-link.svg": "/React-toolslist/static/media/Share-link.a79b7370ab609627ada3ce753d95c080.svg",
     "static/media/collect-active.svg": "/React-toolslist/static/media/collect-active.dbade11f4e3d7aa4c3d1d648e9f925e3.svg",
@@ -37,10 +37,10 @@
     "static/media/plus.svg": "/React-toolslist/static/media/plus.f5a7677f7eb74895e2e0e3cede46ca5e.svg",
     "static/media/arrow-right.svg": "/React-toolslist/static/media/arrow-right.4022a8a3b585f70f5233ef569ef5a370.svg",
     "main.a69663f8.css.map": "/React-toolslist/static/css/main.a69663f8.css.map",
-    "main.690a6951.js.map": "/React-toolslist/static/js/main.690a6951.js.map"
+    "main.ca01511d.js.map": "/React-toolslist/static/js/main.ca01511d.js.map"
   },
   "entrypoints": [
     "static/css/main.a69663f8.css",
-    "static/js/main.690a6951.js"
+    "static/js/main.ca01511d.js"
   ]
 }
